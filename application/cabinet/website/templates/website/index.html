@@ -1,0 +1,353 @@
+{% load staticfiles %}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Cabinet dentiste Rouen Kevin Peignon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Cabinet dentiste Rouen Kevin Peignon" />
+<script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="{% static 'style/css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href='//fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+<link href="{% static 'style/css/style.css' %}" rel='stylesheet' type='text/css' />
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+       <script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+
+		$().UItoTop({ easingType: 'easeOutQuart' });
+});
+</script>
+ <script src="{% static 'js/jquery.chocolat.js' %}"></script>
+		<link rel="stylesheet" href="{% static 'style/css/chocolat.css' %}" type="text/css" media="all" />
+		<!--light-box-files -->
+		<script type="text/javascript">
+		$(function() {
+			$('#example1 a').Chocolat();
+		});
+		</script>
+		<script type="text/javascript">
+		$(function() {
+			$('#record a').Chocolat();
+		});
+		</script>
+		<!-- animation-effect -->
+<link href="{% static 'style/css/animate.min.css' %}" rel="stylesheet">
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script>
+ new WOW().init();
+</script>
+<!-- //animation-effect -->
+
+</head>
+<body>
+<!-- banner -->
+<div class="banner w3l-1">
+ <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <h1><a class="navbar-brand" href="#">Dr. Peignon</a></h1>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#cabinet" class="scroll">Cabinet</a></li>
+            <li><a href="#staff" class="scroll">L'équipe</a></li>
+			   <li><a href="#record" class="scroll">Fiche pratique</a></li>
+            <li><a href="#contact" class="scroll">Contact</a></li>
+
+          </ul>
+
+            <div class="social wow fadeInRight animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+				<ul>
+					<li><a href="#" class="facebook"> </a></li>
+					<li><a href="#" class="facebook twitter"> </a></li>
+				</ul>
+			</div>
+        <div class="clearfix"></div>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	<div class="container" id="cabinet">
+		<div class="header w3ls-2">
+			<div class="logo">
+
+			</div>
+
+			<div class="clearfix"></div>
+		</div>
+			<section class="slider">
+							<div class="flexslider">
+								<ul class="slides">
+									<li>
+										<div class="banner-info">
+											<h3> The generated Lorem Ipsum is therefore</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisc elit velit consectetur adipisc elit. Proin  vestibulum velit.Lorem ipsum ultricies consectetur adipisc elit. Proin  vestibulum velit.Lorem ipsum ultricies.Lorem ipsum ultricies.</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+			</section>
+	</div>
+</div>
+<!-- /banner -->
+
+<!--- vide0 ---->
+		<div class="vide0 agile-4 wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+			<iframe width="100%" height="500" src="https://www.youtube.com/embed/rs-re8dsg5M" frameborder="0" allowfullscreen></iframe>
+		</div>
+<!--- vide0 ---->
+<!-- staff -->
+<div class="container">
+		<div class="staff" id="staff">
+			<div class="ser-top wthree-3 wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+				<h3>L'équipe </h3>
+				<p>Notre équipe est ravi de vous acceuillir dans nos locaux. Il est temps de nous connaitre mieux:</p>
+			</div>
+				{% for staff in staffs %}
+					<div class="col-md-4 ser-left wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+						<span aria-hidden="true"><img class="staff-pictures" src="{% static 'img/img_avatar.png' %}"/></span>
+						<h4>{{staff.last_name}} {{staff.first_name}}: {{staff.working_position}}</h4>
+						<p>{{staff.description}}</p>
+					</div>
+				{% endfor %}
+			<div class="clearfix"></div>
+
+		</div>
+	</div>
+<!-- /staff -->
+
+
+
+<!-- Fiche pratique -->
+<div class="container wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+		<div class="record" id="record">
+			<div class="proj-top w3agile">
+				<h3>Fiche pratique</h3>
+				<p>Voici quelques fiches pratique pour vous aider à bien vous occuper de vos dents dans la vie quotidienne. Car de belle dents c'est important.</p>
+			</div>
+			<div class="gallery-bottom">
+					<div class="col-md-4 gallery-left">
+						<a data-toggle="modal" data-target=".bs-example-modal-md" href="{% static 'img/toothbrush.jpg' %}" class="b-link-stripe b-animate-go  thickbox">
+							<img class="img-responsive lot" src="{% static 'img/toothbrush.jpg' %}" alt="">
+							   <div class="b-wrapper">
+									<div class="b-animate b-from-left b-delay03 ">
+										<i class="plus second"> Petite fiche pour apprendre au gens à se brosser les dents </i>
+									</div>
+							   </div>
+						</a>
+					</div>
+					<div class="col-md-4 gallery-left">
+						<a data-toggle="modal" data-target=".bs-example-modal-md" href="{% static 'img/dental_floss.jpg' %}" class="b-link-stripe b-animate-go  thickbox">
+							<img class="img-responsive lot" src="{% static 'img/dental_floss.jpg' %}" alt="">
+							   <div class="b-wrapper">
+									<div class="b-animate b-from-left b-delay03 ">
+										<i class="plus second"> Petite fiche pour apprendre au gens à utiliser du fil dentaire </i>
+									</div>
+							   </div>
+						</a>
+					</div>
+					<div class="col-md-4 gallery-left">
+						<a data-toggle="modal" data-target=".bs-example-modal-md" href="{% static 'img/11.jpg' %}" class="b-link-stripe b-animate-go  thickbox">
+							<img class="img-responsive lot" src="{% static 'img/tooth_milk.jpg' %}" alt="">
+							   <div class="b-wrapper">
+									<div class="b-animate b-from-left b-delay03 ">
+										<i class="plus second"> Petite fiche pour apprendre au gens comment s'occuper des dents de lait</i>
+									</div>
+							   </div>
+						</a>
+					</div>
+					<div class="col-md-4 gallery-left">
+						<a data-toggle="modal" data-target=".bs-example-modal-md" href="{% static 'img/12.jpg' %}" class="b-link-stripe b-animate-go  thickbox">
+							<img class="img-responsive lot" src="{% static 'img/white_teeth.jpg' %}" alt="">
+							   <div class="b-wrapper">
+									<div class="b-animate b-from-left b-delay03 ">
+										<i class="plus second"> Petite fiche pour apprendre à se blanchir les dents </i>
+									</div>
+							   </div>
+						</a>
+					</div>
+					<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+<!-- note -->
+
+<!-- maps -->
+<div class="container wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+		<div class="record" id="location">
+			<div class="proj-top w3agile">
+				<h3>Nous trouver</h3>
+			</div>
+			<div id="map">
+				<script>
+					function initMap() {
+						var uluru = {lat: 49.4419007, lng: 1.0852697};
+						var map = new google.maps.Map(document.getElementById('map'), {
+							zoom: 4,
+							center: uluru
+						});
+						var marker = new google.maps.Marker({
+							position: uluru,
+							map: map
+						});
+					}
+				</script>
+				<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtuwY4ORUoaRhpjc0JwZO6weemU2bue3A&callback=initMap">
+				</script>
+			</div>
+			<div id="coordinate">
+				<div id="border">
+					<div id="content">
+						<div id="schedule">
+							<h4>Horaires:</h4>
+							<div style="overflow-x:auto;">
+								<table id="openingHours" border="1">
+								  <tr>
+									<th><br></th>
+									<th>Lundi</th>
+									<th>Mardi</th>
+									<th>Mercredi</th>
+									<th>Jeudi</th>
+									<th>Vendredi</th>
+									<th>Samedi</th>
+									<th>Dimanche</th>
+								  </tr>
+								  <tr>
+									<td>Matin</td>
+									<td>9-12h</td>
+									<td>9-12h</td>
+									<td>Fermé</td>
+									<td>9-12h</td>
+									<td>9-12h</td>
+									<td>9-12h</td>
+									<td>Fermé</td>
+								  </tr>
+								  <tr>
+									<td>Après-midi</td>
+									<td>13-18h</td>
+									<td>13-18h</td>
+									<td>13-18h</td>
+									<td>13-18h</td>
+									<td>13-18h</td>
+									<td>13-18h</td>
+									<td>Fermé</td>
+								  </tr>
+								</table>
+							</div>
+						</div>
+						<div id="contactData">
+							<h4>Coordonnées:</h4>
+							<div class="contact-btm">
+								<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+								<p>106 rue du général giraud 76000 Rouen</p>
+							</div>
+							<div class="contact-btm">
+								<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+								<p>07 78 19 82 07</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+<!-- /map -->
+
+<!-- contact -->
+<div class="container wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+		<div class="contact" id="contact">
+			<div class="contact-top">
+				<h3>Nous contacter</h3>
+				<p>Vous avez une question? Remplissez ce formulaire et nous reviendrons vers vous aussi vite que possible!</p>
+			</div>
+				<form action="#" method="post">
+					<div class="col-md-6 contact-left">
+						<input type="text" value="Prénom" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='First name';}">
+					</div>
+					<div class="col-md-6 contact-right">
+						<input type="text" value="Nom" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Last name';}">
+					</div>
+					<div class="col-md-6 contact-left">
+						<input type="text" value="Sujet" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Subject';}">
+					</div>
+					<div class="col-md-6 contact-right">
+						<input type="text" value="Email" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Email';}">
+					</div>
+					<div class="clearfix"></div>
+						<textarea cols="77" rows="6" value=" " onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+						<div class="send">
+							<input type="submit" value="Envoyer">
+						</div>
+				</form>
+		</div>
+	</div>
+<!-- /contact -->
+<!-- footer-top -->
+	<div class="footer-top wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+		<div class="container">
+			<div class="col-md-3 foot-left">
+				<h3>À propos</h3>
+				<h2><a href="index.html">Dr. Peignon</a></h2>
+				<p>Kevin Peignon est un dentiste diplômé à L'université dentaire de Reims, maintenant practicien dans la ville de Rouen.</p>
+			</div>
+			<div class="col-md-3 foot-left">
+					<h3>Contacts</h3>
+					<p>Vous pouvez nous contacter en utilisant les informations ci-dessous</p>
+
+						<div class="contact-btm">
+							<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+							<p>106 rue du général giraud 76000 Rouen</p>
+						</div>
+						<div class="contact-btm">
+							<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+							<p>07 78 19 82 07</p>
+						<div class="contact-btm">
+						</div>
+							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+							<p><a href="mailto:peignonkevin@gmail.com">peignonkevin@gmail.com</a></p>
+						</div>
+						<div class="clearfix"></div>
+
+			</div>
+			<div class="col-md-3 foot-left">
+				<h3>Quelques fiches pratique</h3>
+				<li><a href="#"><img src="{% static 'img/9.jpg' %}" alt="" class="img-responsive"></a></li>
+				<li><a href="#"><img src="{% static 'img/10.jpg' %}" alt="" class="img-responsive"></a></li>
+				<li><a href="#"><img src="{% static 'img/11.jpg' %}" alt="" class="img-responsive"></a></li>
+				<li><a href="#"><img src="{% static 'img/12.jpg' %}" alt="" class="img-responsive"></a></li>
+				<div class="clearfix"></div>
+			</div>
+				<div class="clearfix"></div>
+		</div>
+	</div>
+<!-- /footer-top -->
+<!--- footer ---->
+<div class="footer wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+	<div class="container">
+		<p>© 2017 Developped by <a href="https://www.linkedin.com/profile/view?id=AAIAABNjYeIB86R20f2tQ_53MzT20i3N-5crYfo&trk=nav_responsive_tab_profile_pic" target="_blank">Melvyn Peignon</a> </p>
+	</div>
+</div>
+<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 0;"></span> <span id="toTopHover" style="opacity: 0;"> </span></a>
+<!--- footer ---->
+</body>
+</html>
